@@ -1,6 +1,0 @@
-D:\TestPermutacionesCubanEngenier\TestProjectPermutation\bin\Debug\net7.0\CoverletSourceRootsMapping
-D:\TestPermutacionesCubanEngenier\TestProjectPermutation\obj\Debug\net7.0\TestProjectPermutation.csproj.AssemblyReference.cache
-D:\TestPermutacionesCubanEngenier\TestProjectPermutation\obj\Debug\net7.0\TestProjectPermutation.GeneratedMSBuildEditorConfig.editorconfig
-D:\TestPermutacionesCubanEngenier\TestProjectPermutation\obj\Debug\net7.0\TestProjectPermutation.AssemblyInfoInputs.cache
-D:\TestPermutacionesCubanEngenier\TestProjectPermutation\obj\Debug\net7.0\TestProjectPermutation.AssemblyInfo.cs
-D:\TestPermutacionesCubanEngenier\TestProjectPermutation\obj\Debug\net7.0\TestProjectPermutation.csproj.CoreCompileInputs.cache

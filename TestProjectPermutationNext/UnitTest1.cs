@@ -3,6 +3,8 @@ using Moq;
 using TestPermutacionesCubanEngenier.Services;
 using TestPermutacionesCubanEngenier.Controllers;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace TestProjectPermutationNext
 {    
@@ -12,7 +14,12 @@ namespace TestProjectPermutationNext
         public void Test_FindNextPermutation_ValidInput1()
         {
             // Arrange
-            IPermutationService permutationService = new PermutationService();
+            var serviceProvider = new ServiceCollection()
+                .AddMemoryCache()
+                .BuildServiceProvider();
+
+            var memoryCache = serviceProvider.GetService<IMemoryCache>();
+            IPermutationService permutationService = new PermutationService(memoryCache);
             List<int> input = new List<int> { 1, 2, 3 };
 
             // Act
@@ -23,11 +30,17 @@ namespace TestProjectPermutationNext
             Assert.Equal(expected, result);
         }
 
+
         [Fact]
         public void Test_FindNextPermutation_ValidInput2()
         {
             // Arrange
-            IPermutationService permutationService = new PermutationService();
+            var serviceProvider = new ServiceCollection()
+                .AddMemoryCache()
+                .BuildServiceProvider();
+
+            var memoryCache = serviceProvider.GetService<IMemoryCache>();
+            IPermutationService permutationService = new PermutationService(memoryCache);
             List<int> input = new List<int> { 3, 2, 1 };
 
             // Act
@@ -42,7 +55,12 @@ namespace TestProjectPermutationNext
         public void Test_FindNextPermutation_ValidInput3()
         {
             // Arrange
-            IPermutationService permutationService = new PermutationService();
+            var serviceProvider = new ServiceCollection()
+                .AddMemoryCache()
+                .BuildServiceProvider();
+
+            var memoryCache = serviceProvider.GetService<IMemoryCache>();
+            IPermutationService permutationService = new PermutationService(memoryCache);
             List<int> input = new List<int> { 1, 1, 5 };
 
             // Act

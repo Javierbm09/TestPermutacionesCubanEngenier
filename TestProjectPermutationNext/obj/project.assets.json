@@ -6581,6 +6581,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Microsoft.Extensions.Caching.Memory >= 7.0.0",
       "Microsoft.NET.Test.Sdk >= 17.3.2",
       "Moq >= 4.20.69",
       "TestPermutacionesCubanEngenier >= 1.0.0",
@@ -6638,6 +6639,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "Microsoft.Extensions.Caching.Memory": {
+            "target": "Package",
+            "version": "[7.0.0, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.3.2, )"
