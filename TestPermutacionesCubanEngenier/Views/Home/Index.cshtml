@@ -1,0 +1,25 @@
+﻿@model TestPermutacionesCubanEngenier.Models.Permutation
+@{
+    ViewBag.Title = "Permutación de Números";
+}
+
+<h2>Permutación de Números</h2>
+
+<form method="post" asp-controller="Home" asp-action="Index">
+    <label>Ingrese una lista de números separados por comas:</label>
+    <input name="Numbers" id="numbers" type="text" class="form-control" value="" style="width:150px" />
+    <br>
+    <input style="margin-top:30px" type="submit" value="Encontrar Siguiente Permutación" />
+    <span asp-validation-for="Numbers" class="text-danger"></span>
+</form>
+
+@if (!string.IsNullOrEmpty(ViewBag.Result))
+{
+    <h3>Resultado:</h3>
+    <p>@string.Join(", ", ViewBag.Result)</p>
+}
+
+@if (!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+{
+    <p style="color: red;">@ViewBag.ErrorMessage</p>
+}
